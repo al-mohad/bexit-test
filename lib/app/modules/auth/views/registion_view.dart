@@ -28,7 +28,6 @@ class RegistrationView extends GetView<AuthController> {
                 prefixIcon: const Icon(Icons.person),
                 contentPadding: const EdgeInsets.all(16.0),
                 filled: true,
-                fillColor: Colors.grey[200],
               ),
               validator: (value) =>
                   value!.isEmpty ? 'Please enter first name' : null,
@@ -44,7 +43,6 @@ class RegistrationView extends GetView<AuthController> {
                 prefixIcon: const Icon(Icons.person),
                 contentPadding: const EdgeInsets.all(16.0),
                 filled: true,
-                fillColor: Colors.grey[200],
               ),
               validator: (value) =>
                   value!.isEmpty ? 'Please enter last name' : null,
@@ -61,7 +59,6 @@ class RegistrationView extends GetView<AuthController> {
                 prefixIcon: const Icon(Icons.person),
                 contentPadding: const EdgeInsets.all(16.0),
                 filled: true,
-                fillColor: Colors.grey[200],
               ),
               validator: (value) =>
                   value!.isEmpty ? 'Please enter phone number' : null,
@@ -78,7 +75,6 @@ class RegistrationView extends GetView<AuthController> {
                 prefixIcon: const Icon(Icons.person),
                 contentPadding: const EdgeInsets.all(16.0),
                 filled: true,
-                fillColor: Colors.grey[200],
               ),
               validator: (value) =>
                   value!.isEmpty ? 'Please enter email' : null,
@@ -94,7 +90,6 @@ class RegistrationView extends GetView<AuthController> {
                 prefixIcon: const Icon(Icons.person),
                 contentPadding: const EdgeInsets.all(16.0),
                 filled: true,
-                fillColor: Colors.grey[200],
               ),
               validator: (value) =>
                   value!.isEmpty ? 'Please enter password' : null,

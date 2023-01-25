@@ -47,7 +47,7 @@ class _ApiClient implements ApiClient {
   @override
   Future<ResponseData> verifyUser(code) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'code': code};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
@@ -58,7 +58,7 @@ class _ApiClient implements ApiClient {
     )
             .compose(
               _dio.options,
-              'verify-user/${code}',
+              'verify-user',
               queryParameters: queryParameters,
               data: _data,
             )

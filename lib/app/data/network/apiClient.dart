@@ -20,9 +20,9 @@ abstract class ApiClient {
   @POST(Apis.createUser)
   Future<ResponseData> createUser(@Body() Map<String, dynamic> data);
 
-  @GET('${Apis.verifyUser}/{code}')
+  @GET(Apis.verifyUser)
   Future<ResponseData> verifyUser(
-    @Path('code') String code,
+    @Query('code') String code,
   );
 
   @POST(Apis.changePassword)

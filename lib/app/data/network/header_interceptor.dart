@@ -13,16 +13,23 @@ class HeaderInterceptors extends Interceptor {
       // "Authorization": "Bearer $token",
     });
 
-    // if (Apis.minderTypes.any((p) => options.uri.toString().contains(p))) {
-    //   // final token = await cacheService.retrieveUserToken();
-    //   // options.headers.addAll({
-    //   //   "Accept": "application/json",
-    //   //   "Content-Type": "application/json",
-    //   //   "Authorization": "Bearer $token",
-    //   // });
+    if (options.uri.toString().contains('user-profile-by-id')) {
+      const token = 'authorization';
+      options.headers.addAll({
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer $token",
+      });
+    }
 
-    //   // options.baseUrl = '${options.baseUrl}?platform=$userDevice&type=minder';
-    // }
+    if (options.uri.toString().contains('edit-profile-avatar')) {
+      const token = 'authorization';
+      options.headers.addAll({
+        "Accept": "application/json",
+        "Content-Type": "multipart/form-data",
+        "Authorization": "Bearer $token",
+      });
+    }
 
     return super.onRequest(options, handler);
   }
